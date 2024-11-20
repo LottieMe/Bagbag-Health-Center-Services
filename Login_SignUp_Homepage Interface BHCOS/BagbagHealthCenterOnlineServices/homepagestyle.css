@@ -1,0 +1,271 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Calibri";
+    background: #E0FBE1;
+    background-blend-mode: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.homepagepic {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.homepagepic img {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+.homepagepic .rectangle {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 230px;
+}
+
+.homepagepic .rectangle h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #073C08;
+    font-size: 50px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.homepagepic .rectangle h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #073C08;
+    font-size: 30px;
+    font-family: Arial;
+}
+
+
+header {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: #fff;
+}
+
+header .logo img {
+    max-width: 62px;
+}
+
+header .site-name {
+    position: absolute;
+    font-size: 30px;
+    font-family: "Arial";
+    font-weight: bold;
+    top: 31px;
+    left: 180px;
+    right: 230px;
+    bottom: 0px;
+    color:#073C08 ;
+}
+
+header .menu .menuicon {
+    width: 35px;
+    height: 5px;
+    background-color: #073C08;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+
+.Services {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.Services h4 {
+    text-align: center;
+    color: #073C08;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.Services .OfferedServices {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    width: 1100px;
+}
+
+.Services .OfferedServices .OSContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 48px;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.Services .OfferedServices .OSContainer .OfferOne {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferTwo {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferThree {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferFour {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferFive {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferSix {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferSeven {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferEight {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferNine {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer h5 {
+    margin-top: 20px;
+    bottom: 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Calibri";
+    font-weight: bold;
+    text-align: center;
+}
+
+.Services .OfferedServices .OSContainer img {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 165px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    background-color: #DEDEDE;
+    color: black;
+}
+
+footer p {
+    padding-top: 15px;
+}
