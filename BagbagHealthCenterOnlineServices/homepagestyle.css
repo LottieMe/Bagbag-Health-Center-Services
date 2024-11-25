@@ -1,0 +1,332 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Calibri";
+    background: #E0FBE1;
+    background-blend-mode: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.homepagepic {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.homepagepic img {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+.homepagepic .rectangle {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 230px;
+}
+
+.homepagepic .rectangle h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #073C08;
+    font-size: 50px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.homepagepic .rectangle h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #073C08;
+    font-size: 30px;
+    font-family: Arial;
+}
+
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    white-space: nowrap;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    z-index: 900;
+}
+
+header .logo {
+    width: 80%;
+    margin-right: 75px;
+    display: inline-block;
+}
+
+header .logo img {
+    max-height: 62px;
+}
+
+header .site-name {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Arial";
+    font-weight: bold;
+    color:#073C08 ;
+    top: -10px;
+    left: 10px;
+}
+
+header .menu {
+    cursor: pointer;
+}
+
+header .menu .menuicon {
+    width: 35px;
+    height: 5px;
+    background-color: #073C08;
+    margin: 6px 0;
+}
+
+header .menuitem-container {
+    position: absolute;
+    display: none;
+    top: 33px;
+    right: 7%;
+    opacity: 0.75;
+}
+
+header .menuitem-container .option-container .options {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D9D9D9;
+    color: black;
+    font-size: 16px;
+    font-family: "Calibri";
+    height: 45px;
+    width: 230px;
+    cursor: pointer;
+}
+
+header .menuitem-container .option-container :hover {
+    background: #9A9A9A;
+}
+
+.Services {
+    position: relative;
+    max-width: 100%;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: transparent;
+}
+
+.Services h4 {
+    text-align: center;
+    color: #073C08;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.Services .OfferedServices {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+}
+
+.Services .OfferedServices .OSContainer {
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: transparent;
+    max-width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.Services .OfferedServices .OSContainer .OfferOne {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferTwo {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferThree {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferFour {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferFive {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferSix {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferSeven {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferEight {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer .OfferNine {
+    display: inline-block;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    background-color: #073C08;
+    border-radius: 50px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Services .OfferedServices .OSContainer :hover {
+    background-color: #456d46;
+}
+
+.Services .OfferedServices .OSContainer h5 {
+    margin-top: 20px;
+    bottom: 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Calibri";
+    font-weight: bold;
+    text-align: center;
+}
+
+.Services .OfferedServices .OSContainer img {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 165px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEDEDE;
+    color: black;
+}
+
+
+@media (max-width: 890px) {
+    header .site-name {
+        display: none;
+    }
+}

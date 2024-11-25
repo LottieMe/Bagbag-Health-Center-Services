@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepagestyle.css">
+    <script src="script.js"></script>
+</head>
+<script>
+    const container = document.querySelector('.header');
+    document.body.style.width = container.offsetWidth + 'px';
+  </script>
+<body>
+    <div class="homepagepic">
+        <img src="ImagesLogos/visitingpagebg.png" alt="bg" width="100%">
+        <div class="rectangle">
+            <h3>Welcome to</h3>
+            <h1>Bagbag Health Center</h1>
+            <h1>Online Services</h1>
+        </div>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="ImagesLogos/bagbaglogo.png" alt="Logo1" width="50">
+            <img src="ImagesLogos/qclogo.png" alt="Logo2" width="62">
+            <div class="site-name">Bagbag Health Center Online Services</div>
+        </div>
+        <div id="clickablemenu" class="menu" onclick="toggleStateMenu()">
+            <div class="menuicon"></div>
+            <div class="menuicon"></div>
+            <div class="menuicon"></div>
+        </div>
+        <div id="menuitemcontainer" class="menuitem-container" onclick="hidemenulist()">
+            <div class="option-container">
+                <div class="options" onclick="visitingpage()">Logout</div>
+                <div class="options">Account/Profile</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="Services">
+        <h4>Select a service</h4>
+        <div class="OfferedServices">
+            <div class="OSContainer">
+                <div class="OfferOne" onclick="tbdots()">
+                    <img src="ImagesLogos/TBDotsIcon.png" alt="Offer1">
+                    <h5>TB Dots</h5>
+                </div>
+                <div class="OfferTwo" onclick="maternalchild()">
+                    <img src="ImagesLogos/Maternal&ChildIcon.png" alt="Offer2">
+                    <h5>Maternal & Child</h5>
+                </div>
+                <div class="OfferThree" onclick="vaccination()">
+                    <img src="ImagesLogos/ImmunizationIcon.png" alt="Offer3">
+                    <h5>Vaccination / Immunization</h5>
+                </div>
+                <div class="OfferFour" onclick="dental()">
+                    <img src="ImagesLogos/DentalIcon.png" alt="Offer4">
+                    <h5>Dental</h5>
+                </div>
+                <div class="OfferFive" onclick="familyplanning()">
+                    <img src="ImagesLogos/FamilyPlanning.png" alt="Offer5">
+                    <h5>Family Planning</h5>
+                </div>
+                <div class="OfferSix" onclick="seniorcitizen()">
+                    <img src="ImagesLogos/SeniorCitizenIcon.png" alt="Offer6">
+                    <h5>Senior Citizen Health Care</h5>
+                </div>
+                <div class="OfferSeven" onclick="generalconsultation()">
+                    <img src="ImagesLogos/GeneralConsultationIcon.png" alt="Offer7">
+                    <h5>General Consultation</h5>
+                </div>
+                <div class="OfferEight" onclick="medicalrecords()">
+                    <img src="ImagesLogos/MedicalRecordsIcon.png" alt="Offer8">
+                    <h5>Medical Records</h5>
+                </div>
+                <div class="OfferNine" onclick="bmicalcu()">
+                    <img src="ImagesLogos/BMICalculatorIcon.png" alt="Offer9">
+                    <h5>BMI Calculator</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright @2024 | All rights reserved | SBIT-2M (Group#3)</p>
+    </footer>
+</body>
+</html>

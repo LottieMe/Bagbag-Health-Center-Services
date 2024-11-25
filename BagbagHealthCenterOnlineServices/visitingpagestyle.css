@@ -1,0 +1,370 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Calibri";
+    background: rgba(0, 0, 0, 0.70) url(ImagesLogos/visitingpagebg.png);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+    header {
+        width: max-content;
+    }
+}
+
+header .logo {
+    width: 80%;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+header .logo img {
+    max-height: 62px;
+}
+
+header .site-name {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Arial";
+    font-weight: bold;
+    color:#073C08 ;
+    top: -10px;
+    left: 10px;
+}
+
+header .auth-buttons button {
+    padding: 12px 25px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+header .auth-buttons .login-btn {
+    background-color: #D9D9D9;
+    font-family: "Calibri";
+    font-size: 15px;
+    font-weight: bold;
+    color: #073C08;
+    transition: all 0.3ms ease-in-out;
+}
+
+header .auth-buttons .signup-btn {
+    background-color: #17BA19;
+    font-family: "Calibri";
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3ms ease-in-out;
+}
+
+/* Sidebar styles */
+.main-container {
+    position: relative;
+    display: flex;
+    height: 600px;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Content styles */
+.content {
+    position: relative;
+    top: 20%;
+    left: 15%;
+    height: 50vh;
+    background-color: transparent;
+    color: white;
+    white-space: nowrap;
+}
+
+.content .MainTitle {
+    margin-bottom: 20px;
+}
+
+.content .MainTitle h1 {
+    font-size: 50px;
+    font-family: Arial;
+}
+
+.content h2 {
+    font-size: "Calibri";
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content .SignInNowbtn {
+    margin-bottom: 20px;
+    padding: 15px 70px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    background-color: #17BA19;
+    font-family: "Calibri";
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.content p1 {
+    font-family: "Calibri";
+    font-size: 15px;
+    display: block;
+}
+
+.content p1 a {
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    height: 50px;
+    position:fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEDEDE;
+    color: black;
+}
+
+/* Pop-up Login */
+.bgopacitylogin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    transition-duration: 300ms;
+}
+
+.popup-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    width: 380px;
+    height: 285px;
+    padding: 20px 30px ;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 50px;
+    transition: top 0ms ease-in-out 300ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+
+}
+
+.popup-login .form h2 {
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.popup-login .form .form-element-email {
+    margin: 15px 0px;
+}
+
+.popup-login .form .form-element-password {
+    margin-bottom: 20px;
+}
+
+.popup-login .form .form-element-email label,
+.popup-login .form .form-element-password label {
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+}
+
+.popup-login .form .form-element-email input[type="text"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+
+.popup-login .form .form-element-password input[type="password"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+.popup-login .form .form-element-btns{
+    display: block;
+    text-align: right;
+}
+
+.popup-login .form .form-element-btns button {
+    align-items: flex-end;
+    width: 65px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.popup-login .form .form-element-btns .back-btn {
+    background: #DEDEDE;
+    color: #073C08;
+}
+
+.popup-login .form .form-element-btns .SignIn-btn {
+    background: #17BA19;
+    color: #DDEEFF;
+}
+
+/* Pop-up Signup */
+.bgopacitysignup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    transition-duration: 300ms;
+}
+
+.popup-signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    width: 370px;
+    height: 340px;
+    padding: 20px 30px ;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 50px;
+    transition: top 0ms ease-in-out 300ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+
+}
+
+.popup-signup .formsignup h2 {
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.popup-signup .formsignup .formsignup-element-name {
+    margin: 15px 0px;
+}
+
+.popup-signup .formsignup .formsignup-element-email {
+    margin: 15px 0px;
+}
+
+.popup-signup .formsignup .formsignup-element-createpassword {
+    margin-bottom: 20px;
+}
+
+.popup-signup .formsignup .formsignup-element-email label,
+.popup-signup .formsignup .formsignup-element-createpassword label,
+.popup-signup .formsignup .formsignup-element-name label {
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+}
+
+.popup-signup .formsignup .formsignup-element-name input[type="text"] {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+.popup-signup .formsignup .formsignup-element-email input[type="text"] {
+    margin-top: 0px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+.popup-signup .formsignup .formsignup-element-createpassword input[type="password"] {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+.popup-signup .formsignup .formsignup-element-btns{
+    padding-top: 8px;
+    display: block;
+    text-align: right;
+}
+
+.popup-signup .formsignup .formsignup-element-btns button {
+    align-items: flex-end;
+    width: 65px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.popup-signup .formsignup .formsignup-element-btns .back-btn {
+    background: #DEDEDE;
+    color: #073C08;
+}
+
+.popup-signup .formsignup .formsignup-element-btns .SignUp-btn {
+    background: #17BA19;
+    color: #DDEEFF;
+}

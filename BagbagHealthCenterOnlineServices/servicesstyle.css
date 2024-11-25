@@ -1,0 +1,299 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Calibri";
+}
+
+.homepagepiccrop {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 97px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homepagepiccrop .rectangleoverlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 97px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.homepagepiccrop img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 600px;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 97px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(255, 255, 255, 0.5); 
+  white-space: nowrap;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+
+header .logo {
+  width: 60%;
+  display: inline;
+}
+
+header .logo img {
+  max-height: 62px;
+}
+
+header .site-name {
+  position: relative;
+  resize: both;
+  display: inline-block;
+  font-size: 30px;
+  font-family: "Arial";
+  font-weight: bold;
+  color:#073C08 ;
+  top: -10px;
+  left: 10px;
+}
+
+header .menu {
+  cursor: pointer;
+}
+
+header .menu .menuicon {
+  width: 35px;
+  height: 5px;
+  background-color: #073C08;
+  margin: 6px 0;
+}
+
+header .menuitem-container {
+  position: absolute;
+  display: none;
+  top: 33px;
+  right: 7%;
+  opacity: 0.75;
+  z-index: 999;
+}
+
+header .menuitem-container .option-container .options {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D9D9D9;
+  color: black;
+  font-size: 16px;
+  font-family: "Calibri";
+  height: 45px;
+  width: 230px;
+  cursor: pointer;
+}
+
+header .menuitem-container .option-container :hover {
+  background: #9A9A9A;
+}
+
+/* Content */
+.main-container {
+  display: flex;
+  height: 620px;
+  width: 100%;
+  background-color: #E0FBE1;
+}
+
+/* SIDEBAR */
+.sidebar {
+  height: 620px;
+  width: 350px;
+  background-color: #073C08;
+  color: #FFFFFF;
+}
+
+.userpicture {
+  position: relative;
+  height: 300px;
+  width: 350px;
+  background: #9A9A9A;
+}
+
+.sidebar ul {
+  position: relative;
+  height: 320px;
+  width: 350px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  scrollbar-width: none;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 75px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul li:hover {
+  background-color: #0b5a0c
+}
+
+/* Content area styling */
+.content {
+  position: absolute;
+  left: 350px;
+  height: 620px;
+  width: screen;
+  background-color: #E0FBE1;
+}
+
+.TBDots {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.MaternalChild {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.Vaccination {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+
+.Dental {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.FamilyPlanning {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.SeniorCitizen {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.GeneralConsultation {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.MedicalRecords  {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+.BMICalcu {
+  display: block;
+  position: relative;
+  width: screen;
+  height: screen;
+  padding: 30px 50px;
+  background: #E0FBE1;
+}
+
+
+/* form elements */
+h1 {
+  color: #073C08;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Calibri";
+}
+
+h2 {
+  color: #073C08;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Calibri";
+}
+
+label {
+  color: #073C08;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Calibri";
+}
+
+.main-container .content input {
+  display: relative;
+  height: 25px;
+  width: 150px;
+  color: hsl(0, 0%, 29%);
+  outline: none;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: #DEDEDE;
+  color: black;
+}

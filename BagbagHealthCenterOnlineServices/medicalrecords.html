@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="servicesstyle.css">
+    <script src="script.js"></script>
+    <title>Offered Services</title>
+</head>
+<body>
+    <div class="homepagepiccrop">
+        <div class="rectangleoverlay"></div>
+        <img src="ImagesLogos/visitingpagebg.png" alt="bg" width="100%">
+    </div>
+    <header>
+        <div class="logo">
+            <img src="ImagesLogos/bagbaglogo.png" alt="Logo1" width="50">
+            <img src="ImagesLogos/qclogo.png" alt="Logo2" width="62">
+            <div class="site-name">Bagbag Health Center Online Services</div>
+        </div>
+        <div id="clickablemenu" class="menu" onclick="toggleStateMenu()">
+            <div class="menuicon"></div>
+            <div class="menuicon"></div>
+            <div class="menuicon"></div>
+        </div>
+        <div id="menuitemcontainer" class="menuitem-container" onclick="hidemenulist()">
+            <div class="option-container">
+                <div class="options" onclick="visitingpage()">Logout</div>
+                <div class="options">Account/Profile</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="userpicture"></div>
+            <ul>
+                <li class="first" onclick="tbdots()">TB Dots</li>
+                <li class="second" onclick="maternalchild()">Maternal & Child</li>
+                <li class="third" onclick="vaccination()">Vaccination / Immunization</li>
+                <li class="fourth" onclick="dental()">Dental</li>
+                <li class="fifth" onclick="familyplanning()">Family Planning</li>
+                <li class="sixth" onclick="seniorcitizen()">Senior Citizen Health Care</li>
+                <li class="seventh" onclick="generalconsultation()">General Consultation</li>
+                <li class="eighth" onclick="medicalrecords()">Medical Records</li>
+                <li class="ninth" onclick="bmicalcu()">BMI Calculator</li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <form action="">
+                <div class="MedicalRecords">
+                    <h1>Medical Records</h1>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright @2024 | All rights reserved | SBIT-2M (Group#3)</p>
+    </footer>
+    
+</body>
+</html>
