@@ -1,0 +1,200 @@
+CREATE DATABASE BagbagHealthCareDB;
+USE BagbagHealthCareDB;
+show databases;
+
+CREATE TABLE tbl_users (
+    name VARCHAR(255) NOT NULL,
+    email_address VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    phone_number VARCHAR(15) NOT NULL
+);
+INSERT INTO tbl_users (name, email_address, username, phone_number
+) VALUES (
+    'Juan Dela Cruz',
+    'juandelacruz@gmail.com',
+    '@juandelacruz',
+    '09171234567'
+);
+show tables;
+select * from tbl_users;
+
+USE BagbagHealthCareDB;
+
+CREATE TABLE tbl_login (
+    email_address VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    biometric_template BLOB, 
+    password VARCHAR(255) NOT NULL -- optional
+);
+INSERT INTO tbl_login ( email_address, username, biometric_template, password)
+VALUES ( 'juandelacruz@gmail.com', '@juandelacruz', 'facecard', 'juan123');
+
+use BagbagHealthCareDB;
+
+CREATE TABLE TBDots (
+    userID INT,
+    time_appointment TIME,
+    date_appointment DATE,
+    userHistory DATE,
+    userStatus VARCHAR(50)
+);
+
+
+CREATE TABLE MaternalChild (
+    motherName VARCHAR(255) NOT NULL, 
+    contactNumber VARCHAR(15), 
+    address VARCHAR(255), 
+	pregnancyStage ENUM('Prenatal', 'Postnatal') NOT NULL,
+    expectedDeliveryDate DATE, 
+	checkupDate DATE NOT NULL,  
+	additionalNotes TEXT  
+);
+
+CREATE TABLE Vaccination (
+    userID INT,
+    vaccineType VARCHAR(100) NOT NULL,
+    vaccineDose ENUM('1st', '2nd', '3rd', 'Booster') NOT NULL,
+    appointmentDate DATE NOT NULL,              
+    vaccinationStatus ENUM('Pending', 'Completed') NOT NULL
+);
+
+-- Create Dental table
+CREATE TABLE Dental (
+  userID INT NOT NULL,                    
+    appointmentDate DATETIME NOT NULL,
+    dentistName VARCHAR(255), 
+    treatmentType VARCHAR(100) NOT NULL,
+    treatmentStatus ENUM('Pending', 'Completed', 'Cancelled') NOT NULL
+);
+
+-- Create Family Planning table
+CREATE TABLE FamilyPlanning (
+   userID INT NOT NULL,
+    consultationDate DATETIME NOT NULL,
+    ConsultantName VARCHAR(255), 
+    methodType VARCHAR(100) NOT NULL, -- Contraceptive method chosen (e.g., IUD, Pills, Implants, Condoms - serrano)
+    methodStatus ENUM('Started', 'Changed', 'Discontinued') NOT NULL,
+    followUpDate DATE,        
+	sideEffects TEXT,
+    additionalNotes TEXT
+);
+
+-- Create Senior Citizen HC table
+CREATE TABLE SeniorCitizenHC (
+    userID INT NOT NULL, 
+    healthStatus VARCHAR(255), -- Current health status (e.g., "Healthy", "Chronic Conditions", "Recovering from Surgery" - serrano)
+    medications TEXT,
+    appointmentDate DATETIME NOT NULL,
+    caregiverName VARCHAR(255), -- if applicable
+    mobilityAidRequired BOOLEAN, -- Whether the senior citizen requires mobility aids (e.g., walker, wheelchair - serano)
+    bloodPressure VARCHAR(20),
+    bloodSugarLevel VARCHAR(20),
+    followUpDate DATE,
+    additionalNotes TEXT
+);
+
+-- Create General Consultation table
+CREATE TABLE GeneralConsultation (
+    userID INT NOT NULL,
+    consultationDate DATETIME NOT NULL,
+    doctorName VARCHAR(255),
+    reasonForVisit TEXT NOT NULL, -- Reason the patient is seeking consultation (e.g., fever, pain, routine checkup - serrano)
+    symptoms TEXT,
+    diagnosis VARCHAR(255),
+    treatmentPrescribed TEXT,
+    followUpDate DATE,
+    consultationNotes TEXT,
+    consultationStatus ENUM('Pending', 'Completed') NOT NULL
+);
+
+-- Create MedRecords table
+CREATE TABLE MedRecords (
+    userID INT NOT NULL,
+    dateCreated DATETIME NOT NULL,
+    doctorName VARCHAR(255),
+    diagnosis TEXT,
+    treatmentPlan TEXT, -- N/A if none
+    procedures TEXT, -- N/A if none
+    medications TEXT, -- N/A if none
+    labResults TEXT, -- N/A if none
+    allergies TEXT, -- N/A if none
+    chronicConditions TEXT,  -- N/A if none
+    nextAppointment DATETIME,
+    status ENUM('Active', 'Archived') NOT NULL,
+    additionalNotes TEXT              
+);
+
+-- Create BMI Calculator table
+CREATE TABLE BMICalculator (
+	userID INT NOT NULL,
+    recordDate DATETIME NOT NULL,
+    weight DECIMAL(5,2),
+    height DECIMAL(5,2),
+    bmi DECIMAL(5,2),
+    bmiCategory VARCHAR(50) -- Category based on BMI (Underweight, Normal, etc. - serrano)
+);
+
+DELIMITER //
+
+CREATE TRIGGER CalculateBMIBeforeInsert
+BEFORE INSERT ON BMICalculator
+FOR EACH ROW
+BEGIN
+    -- Calculate BMI: weight / (height * height)
+    SET NEW.bmi = NEW.weight / (NEW.height * NEW.height);
+    
+    -- Determine BMI Category based on the calculated BMI
+    IF NEW.bmi < 18.5 THEN
+        SET NEW.bmiCategory = 'Underweight';
+    ELSEIF NEW.bmi >= 18.5 AND NEW.bmi <= 24.9 THEN
+        SET NEW.bmiCategory = 'Normal weight';
+    ELSEIF NEW.bmi >= 25 AND NEW.bmi <= 29.9 THEN
+        SET NEW.bmiCategory = 'Overweight';
+    ELSE
+        SET NEW.bmiCategory = 'Obesity';
+    END IF;
+END//
+
+DELIMITER ;
+
+
+USE BagbagHealthCareDB;
+show databases;
+
+CREATE TABLE tbl_users (
+    name VARCHAR(255) NOT NULL,
+    email_address VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    phone_number VARCHAR(15) NOT NULL
+);
+INSERT INTO tbl_users (name, email_address, username, phone_number
+) VALUES (
+    'Juan Dela Cruz',
+    'juandelacruz@gmail.com',
+    '@juandelacruz',
+    '09171234567'
+);
+show tables;
+select * from tbl_users;
+
+USE BagbagHealthCareDB;
+
+CREATE TABLE tbl_login (
+    email_address VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    biometric_template BLOB, 
+    password VARCHAR(255) NOT NULL -- optional
+);
+INSERT INTO tbl_login ( email_address, username, biometric_template, password)
+VALUES ( 'juandelacruz@gmail.com', '@juandelacruz', 'facecard', 'juan123');
+
+describe table tbl_login;
+
+select * from tbl_login;
+
+select * from tbl_users;
+
+
+
+
+
